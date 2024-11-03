@@ -18,6 +18,5 @@ public class Main {
         System.out.println(author2.getLastName());
 
         System.out.println(author2.getFirstName());
-
     }
 }
