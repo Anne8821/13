@@ -1,15 +1,23 @@
+import java.sql.SQLOutput;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Author author1 = new Author("Эрих","Ремарк");
+        System.out.println(author1.getFirstName());
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Book book = new Book("Три товарища",1932,author1);
+        System.out.println(book.getYear());
+
+        book.setYear(1940);
+
+        System.out.println(book.getYear());
+
+        Author author2 = new Author("Федор","Достоевский");
+        System.out.println(author2.getLastName());
+
+        System.out.println(author2.getFirstName());
+
     }
 }
