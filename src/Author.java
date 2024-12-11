@@ -18,11 +18,11 @@ public class Author {
     }
 
     @Override
-    public boolean eguals(Object o) {
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (null == o || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return Object.equals(firstName, author.firstName) && Object.equals(lastName, author.lastName);
+        return Objects.equals(firstName, author.firstName) && Objects.equals(lastName, author.lastName);
     }
 
     @Override

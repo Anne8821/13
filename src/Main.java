@@ -8,7 +8,7 @@ public class Main {
         Author somersetMaugham = new Author("Somerset","Maugham");
         Author somersetMaugham2 = new Author("Somerset","Maugham");
 
-        System.out.println(somersetMaugham2.eguals(somersetMaugham));
+        System.out.println(somersetMaugham2.equals(somersetMaugham));
 
         Book firstBook = new Book("Christmas vacation", 1939, somersetMaugham);
 
@@ -35,24 +35,24 @@ public class Main {
         System.out.println(firstBook.getYear());
 
         System.out.println("Authors:");
-        Author somersetMaugham = new Author("Somerset","Maugham");
-        Author somersetMaugham2 = new Author("Somerset","Maugham");
+        Author somersetWilliam = new Author("Somerset","William");
+        Author somersetWilliam2 = new Author("Somerset","William");
         Author levTolstoy = new Author("Lev", "Tolstoy");
-        System.out.println("Author copies equal: " + somersetMaugham.eguals(somersetMaugham2));
-        System.out.println("Author copies equal by hashCode: " + (somersetMaugham.hashCode() == somersetMaugham2.hashCode()));
-        System.out.println("Author equal: " + somersetMaugham.eguals(levTolstoy));
-        System.out.println("Author equal by hashCode: " + (somersetMaugham.hashCode() == levTolstoy.hashCode()));
+        System.out.println("Author copies equal: " + somersetWilliam.equals(somersetWilliam2));
+        System.out.println("Author copies equal by hashCode: " + (somersetWilliam.hashCode() == somersetWilliam2.hashCode()));
+        System.out.println("Author equal: " + somersetWilliam.equals(levTolstoy));
+        System.out.println("Author equal by hashCode: " + (somersetWilliam.hashCode() == levTolstoy.hashCode()));
 
-        System.out.println(somersetMaugham);
+        System.out.println(somersetWilliam);
         System.out.println(levTolstoy);
 
         System.out.println("---------------");
 
         System.out.println("Books:");
 
-        Book theStand = new Book("An hour before dawn", 1942, somersetMaugham);
+        Book theStand = new Book("An hour before dawn", 1942, somersetWilliam);
 
-        Book theStand2 = new Book("An hour before dawn", 1942, somersetMaugham);
+        Book theStand2 = new Book("An hour before dawn", 1942, somersetWilliam);
         Book warAndPeace = new Book("War and Peace", 1869, levTolstoy);
         System.out.println("Author copies equal: " + theStand.equals(theStand2));
         System.out.println("Author copies equal by hashCode: " + (theStand.hashCode() == theStand2.hashCode()));
